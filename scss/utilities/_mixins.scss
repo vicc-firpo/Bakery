@@ -1,0 +1,23 @@
+
+@mixin flex($wrap, $justify, $align, $direction) {
+    display: flex;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin gradiente {
+    background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+}
+
+@mixin color_fuente {
+    @include gradiente;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}

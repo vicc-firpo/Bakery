@@ -1,0 +1,81 @@
+* {
+  margin: 0; /* sacamos el argen por defecto */
+  padding: 0; /* sacamos el padding por defecto */
+  box-sizing: border-box; /* al agregarle padding a un elemento no ocupa mas espacio, resta del ya existente */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+}
+
+img.logo {
+  width: 14rem;
+}
+
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  width: 100rem;
+  font-size: 2.5rem;
+}
+
+.nav-link {
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 1000;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+.nav-link .hover {
+  background: #d4b4b4;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+section {
+  background-color: white;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  height: 30rem;
+  font-family: "Montserrat", sans-serif;
+  color: #d4b4b4;
+  font-size: 2rem;
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+}
+footer .copy, footer .rs {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .rs-icon {
+  padding: 0 1rem;
+}
+footer .rs-icon-links {
+  color: #d4b4b4;
+}
+footer .info p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
