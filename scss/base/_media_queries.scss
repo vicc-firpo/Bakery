@@ -1,0 +1,277 @@
+
+@media only screen and (max-width: 645px) {
+
+    /* General */
+
+    footer {
+        font-size: map-get($map: $font_sizes, $key: xxs);
+    }
+
+    /* Index */
+
+    .titulo-int {
+        font-size: map-get($map: $font_sizes, $key: xs);
+    }
+
+    /* Tortas Personalizadas */
+
+    .tp-text {
+        font-size: map-get($map: $font_sizes, $key: xxs);
+    }
+
+    /* Postres Clasicos */
+
+    .pc-contenedor {
+        padding: 3rem;
+    }
+
+    .al_reves {
+        @include flex(wrap, center, center, column-reverse);
+    }
+
+    .pc-contenedor-img {
+        @include sizes(30rem, 20rem);
+        margin-bottom: 4rem;
+    }
+
+    .pc-contenedor-text {
+        @include sizes(30rem, 20rem);
+    }
+
+    .pc-contenedor-text-int {
+        @include sizes(29.6rem, 19.6rem);
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .pc-contenedor-text-int-subtitulo {
+        font-size: map-get($map: $font_sizes, $key: xxs);
+    }
+
+    /* Envios */
+
+    .envios {
+        @include flex(null, center, null, null);
+        padding: 3rem 0;
+    }
+
+    .envios-text {
+        font-size: map-get($map: $font_sizes, $key: xs);
+        padding: 1rem 0;
+        @include sizes(25rem, null);
+        text-align: center;
+    }
+
+    .map {
+        @include sizes(28rem, 18rem);
+    }
+
+    .envios-borde {
+        @include sizes(30.6rem, 20.6rem);
+    }
+
+    .envios-borde-contenedor {
+        @include sizes(30rem, 20rem);
+    }
+
+    /* Contacto */
+
+    .contacto-text {
+        font-size: map-get($map: $font_sizes, $key: xs);
+    }
+
+    .contacto-borde {
+        @include sizes(30rem, 70rem);
+    }
+
+    .contacto-borde-ext {
+        @include sizes(29.6rem, 69.6rem);
+    }
+
+    .contacto-borde-ext-form {
+        @include sizes(25rem, 65rem);
+        font-size: 1rem
+    }
+
+    .contacto-borde-ext-form-tipo1 {
+        @include sizes(25rem, 3.5rem);
+    }
+
+    .contacto-borde-ext-form-tipo2 {
+        @include sizes(25rem, 30rem);
+    }
+
+    .contacto-borde-ext-form-tipo3 {
+        @include sizes(5rem, null);
+    }
+
+}
+
+@media only screen and (min-width: 645px) and (max-width: 879px) {
+
+    /* General */
+
+    footer {
+        font-size: map-get($map: $font_sizes, $key: xxs);
+    }
+
+    /* Index */
+
+    .titulo-int {
+        font-size: 4rem;
+    }
+
+    /* Tortas Personalizadas */
+
+    .tp-text {
+        font-size: map-get($map: $font_sizes, $key: xs);
+    }
+
+    /* Postres Clasicos */
+
+    .pc-contenedor {
+        padding: 4rem;
+    }
+
+    .al_reves {
+        @include flex(wrap, center, center, column-reverse);
+    }
+
+    .pc-contenedor-img {
+        @include sizes(40rem, 30rem);
+        margin-bottom: 4rem;
+    }
+
+    .pc-contenedor-text {
+        @include sizes(40rem, 30rem);
+    }
+
+    .pc-contenedor-text-int {
+        @include sizes(39.6rem, 29.6rem);
+        font-size: map-get($map: $font_sizes, $key: xxs);
+        padding: 1rem 2rem;
+    }
+
+    .pc-contenedor-text-int-subtitulo {
+        font-size: map-get($map: $font_sizes, $key: xs);
+    }
+
+    /* Envios */
+
+    .envios-text {
+        font-size: map-get($map: $font_sizes, $key: s);
+        padding: 1rem 0;
+        @include sizes(50rem, null);
+        text-align: center;
+    }
+
+    /* Contacto */
+
+    .contacto-text {
+        font-size: map-get($map: $font_sizes, $key: m);
+    }
+
+    .contacto-borde {
+        @include sizes(60rem, 100rem);
+    }
+
+    .contacto-borde-ext {
+        @include sizes(59.6rem, 99.6rem);
+    }
+
+    .contacto-borde-ext-form {
+        @include sizes(55rem, 95rem);
+        font-size: map-get($map: $font_sizes, $key: xs);
+    }
+
+    .contacto-borde-ext-form-tipo1 {
+        @include sizes(55rem, 5rem);
+    }
+
+    .contacto-borde-ext-form-tipo2 {
+        @include sizes(55rem, 40rem);
+    }
+
+    .contacto-borde-ext-form-tipo3 {
+        @include sizes(12rem, null);
+    }
+
+}
+
+@media only screen and (min-width: 879px) and (max-width: 1320px) {
+
+    /* General */
+
+    footer {
+        font-size: map-get($map: $font_sizes, $key: xxs);
+    }
+
+    /* Index */
+
+    .titulo-int {
+        font-size: 4rem;
+    }
+
+    /* Tortas Personalizadas */
+
+    .tp-text {
+        font-size: map-get($map: $font_sizes, $key: xs);
+    }
+
+    /* Postres Clasicos */
+
+    .pc-contenedor {
+        padding: 4rem;
+    }
+
+    .pc-contenedor-img {
+        @include sizes(40rem, 30rem);
+        margin-bottom: 4rem;
+    }
+
+    .pc-contenedor-text {
+        @include sizes(40rem, 30rem);
+    }
+
+    .pc-contenedor-text-int {
+        @include sizes(39.6rem, 29.6rem);
+        font-size: map-get($map: $font_sizes, $key: xxs);
+        padding: 1rem 2rem;
+    }
+
+    .pc-contenedor-text-int-subtitulo {
+        font-size: map-get($map: $font_sizes, $key: xs);
+    }
+
+    /* Contacto */
+
+    .contacto-text {
+        font-size: map-get($map: $font_sizes, $key: m);
+    }
+
+    .contacto-borde {
+        @include sizes(80rem, 100rem);
+    }
+
+    .contacto-borde-ext {
+        @include sizes(79.6rem, 99.6rem);
+    }
+
+    .contacto-borde-ext-form {
+        @include sizes(75rem, 95rem);
+        font-size: map-get($map: $font_sizes, $key: xs);
+    }
+
+    .contacto-borde-ext-form-tipo1 {
+        @include sizes(75rem, 5rem);
+    }
+
+    .contacto-borde-ext-form-tipo2 {
+        @include sizes(75rem, 40rem);
+    }
+
+    .contacto-borde-ext-form-tipo3 {
+        @include sizes(15rem, null);
+    }
+
+}

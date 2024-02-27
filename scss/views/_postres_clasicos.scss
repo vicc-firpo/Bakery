@@ -1,0 +1,68 @@
+
+.pc {
+
+    &-contenedor {
+
+        @include flex(wrap, space-evenly, null, null);
+        padding: 6rem;
+
+        &-img {
+
+            @include sizes(60rem, 50rem);
+            padding: 2rem 3rem;
+
+        }
+
+        &-text {
+
+            @include flex(wrap, center, center, null);
+            @include gradiente;
+            z-index: 1;
+            border-radius: 4rem;
+            @include sizes(60rem, 50rem);
+
+            &-int {
+
+                @include flex(wrap, center, center, column);
+                font-family: $tipografia_principal;
+                font-size: map-get($map: $font_sizes, $key: m);
+                @include sizes(59.6rem, 49.6rem);
+                padding: 2rem 3rem;
+                color: black;
+                background-color: white;
+                border-radius: 4rem;
+
+                &-subtitulo {
+
+                    @include flex(wrap, center, center, null);
+                    font: map-get($map: $font_sizes, $key: l);
+                    @include color_fuente;
+                    font-weight: $principal_weight_font;
+
+                }
+
+                &-boton {
+
+                    @include flex(wrap, center, center, null);
+
+                    &-int {
+
+                        @include flex(wrap, center, center, null);
+                        border: none;
+                        @include gradiente;
+                        color: $color3;
+                        @include sizes(20rem, null);
+                        border-radius: 4rem;
+                        padding: 1rem 2rem;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

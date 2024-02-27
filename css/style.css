@@ -12,18 +12,16 @@ img {
   width: 100%;
 }
 
-img.logo {
-  width: 14rem;
-}
-
 .encabezado {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
-
-.menu {
+.encabezado img.logo {
+  width: 18rem;
+}
+.encabezado .menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -32,8 +30,7 @@ img.logo {
   width: 100rem;
   font-size: 2.5rem;
 }
-
-.nav-link {
+.encabezado .menu .nav-link {
   background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -41,7 +38,7 @@ img.logo {
   text-decoration: none;
   font-size: 2.5rem;
 }
-.nav-link .hover {
+.encabezado .menu .nav-link:hover {
   background: #d4b4b4;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -53,6 +50,7 @@ section {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   height: 30rem;
   font-family: "Montserrat", sans-serif;
@@ -63,8 +61,10 @@ footer {
 footer .copy, footer .rs {
   padding: 2rem 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 footer .rs-icon {
   padding: 0 1rem;
@@ -72,10 +72,503 @@ footer .rs-icon {
 footer .rs-icon-links {
   color: #d4b4b4;
 }
-footer .info p {
+footer .info {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide {
+  padding-top: 2rem;
+}
+
+.titulo {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.titulo-int {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5rem 0;
+  font-size: 6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 1000;
+  text-align: center;
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.torta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.torta-int {
+  width: 40rem;
+}
+
+.tp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6rem;
+}
+.tp-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 1000;
+  padding: 2rem 3rem;
+  text-align: center;
+}
+
+.pc-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 6rem;
+}
+.pc-contenedor-img {
+  width: 60rem;
+  height: 50rem;
+  padding: 2rem 3rem;
+}
+.pc-contenedor-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+  z-index: 1;
+  border-radius: 4rem;
+  width: 60rem;
+  height: 50rem;
+}
+.pc-contenedor-text-int {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  width: 59.6rem;
+  height: 49.6rem;
+  padding: 2rem 3rem;
+  color: black;
+  background-color: white;
+  border-radius: 4rem;
+}
+.pc-contenedor-text-int-subtitulo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font: 3.5rem;
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 1000;
+}
+.pc-contenedor-text-int-boton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.pc-contenedor-text-int-boton-int {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+  color: #d4b4b4;
+  width: 20rem;
+  border-radius: 4rem;
+  padding: 1rem 2rem;
+}
+
+.envios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6rem 0;
+}
+.envios-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  padding: 3rem 0;
+  width: 100rem;
+  font-weight: 1000;
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+}
+.envios-borde {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+  z-index: 1;
+  width: 65rem;
+  height: 50rem;
+}
+.envios-borde-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 2rem 3rem;
+  width: 64.6rem;
+  height: 49.6rem;
+}
+
+.contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6rem 0;
+}
+.contacto-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 1000;
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding: 2rem 0;
+  text-align: center;
+}
+.contacto-borde {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+  z-index: 1;
+  border-radius: 2rem;
+  width: 120rem;
+  height: 110rem;
+}
+.contacto-borde-ext {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 119.6rem;
+  height: 109.6rem;
+  background-color: #d4b4b4;
+  border-radius: 2rem;
+}
+.contacto-borde-ext-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  width: 110rem;
+  height: 100rem;
+}
+.contacto-borde-ext-form-tipo1, .contacto-borde-ext-form-tipo3, .contacto-borde-ext-form-tipo2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  border: none;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #8f4f4f 0%, #9c7575 100%);
+  color: #d4b4b4;
+  width: 110rem;
+  height: 6rem;
+}
+.contacto-borde-ext-form-tipo2 {
+  width: 110rem;
+  height: 25rem;
+}
+.contacto-borde-ext-form-tipo3 {
+  width: 20rem;
+}
+
+#nombre::placeholder {
+  color: #d4b4b4;
+}
+
+#mail::placeholder {
+  color: #d4b4b4;
+}
+
+#cel::placeholder {
+  color: #d4b4b4;
+}
+
+#mensaje::placeholder {
+  color: #d4b4b4;
+}
+
+@media only screen and (max-width: 645px) {
+  /* General */
+  footer {
+    font-size: 1.5rem;
+  }
+  /* Index */
+  .titulo-int {
+    font-size: 2rem;
+  }
+  /* Tortas Personalizadas */
+  .tp-text {
+    font-size: 1.5rem;
+  }
+  /* Postres Clasicos */
+  .pc-contenedor {
+    padding: 3rem;
+  }
+  .al_reves {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .pc-contenedor-img {
+    width: 30rem;
+    height: 20rem;
+    margin-bottom: 4rem;
+  }
+  .pc-contenedor-text {
+    width: 30rem;
+    height: 20rem;
+  }
+  .pc-contenedor-text-int {
+    width: 29.6rem;
+    height: 19.6rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+  .pc-contenedor-text-int-subtitulo {
+    font-size: 1.5rem;
+  }
+  /* Envios */
+  .envios {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+  }
+  .envios-text {
+    font-size: 2rem;
+    padding: 1rem 0;
+    width: 25rem;
+    text-align: center;
+  }
+  .map {
+    width: 28rem;
+    height: 18rem;
+  }
+  .envios-borde {
+    width: 30.6rem;
+    height: 20.6rem;
+  }
+  .envios-borde-contenedor {
+    width: 30rem;
+    height: 20rem;
+  }
+  /* Contacto */
+  .contacto-text {
+    font-size: 2rem;
+  }
+  .contacto-borde {
+    width: 30rem;
+    height: 70rem;
+  }
+  .contacto-borde-ext {
+    width: 29.6rem;
+    height: 69.6rem;
+  }
+  .contacto-borde-ext-form {
+    width: 25rem;
+    height: 65rem;
+    font-size: 1rem;
+  }
+  .contacto-borde-ext-form-tipo1, .contacto-borde-ext-form-tipo2, .contacto-borde-ext-form-tipo3 {
+    width: 25rem;
+    height: 3.5rem;
+  }
+  .contacto-borde-ext-form-tipo2 {
+    width: 25rem;
+    height: 30rem;
+  }
+  .contacto-borde-ext-form-tipo3 {
+    width: 5rem;
+  }
+}
+@media only screen and (min-width: 645px) and (max-width: 879px) {
+  /* General */
+  footer {
+    font-size: 1.5rem;
+  }
+  /* Index */
+  .titulo-int {
+    font-size: 4rem;
+  }
+  /* Tortas Personalizadas */
+  .tp-text {
+    font-size: 2rem;
+  }
+  /* Postres Clasicos */
+  .pc-contenedor {
+    padding: 4rem;
+  }
+  .al_reves {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .pc-contenedor-img {
+    width: 40rem;
+    height: 30rem;
+    margin-bottom: 4rem;
+  }
+  .pc-contenedor-text {
+    width: 40rem;
+    height: 30rem;
+  }
+  .pc-contenedor-text-int {
+    width: 39.6rem;
+    height: 29.6rem;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+  .pc-contenedor-text-int-subtitulo {
+    font-size: 2rem;
+  }
+  /* Envios */
+  .envios-text {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    width: 50rem;
+    text-align: center;
+  }
+  /* Contacto */
+  .contacto-text {
+    font-size: 3rem;
+  }
+  .contacto-borde {
+    width: 60rem;
+    height: 100rem;
+  }
+  .contacto-borde-ext {
+    width: 59.6rem;
+    height: 99.6rem;
+  }
+  .contacto-borde-ext-form {
+    width: 55rem;
+    height: 95rem;
+    font-size: 2rem;
+  }
+  .contacto-borde-ext-form-tipo1, .contacto-borde-ext-form-tipo2, .contacto-borde-ext-form-tipo3 {
+    width: 55rem;
+    height: 5rem;
+  }
+  .contacto-borde-ext-form-tipo2 {
+    width: 55rem;
+    height: 40rem;
+  }
+  .contacto-borde-ext-form-tipo3 {
+    width: 12rem;
+  }
+}
+@media only screen and (min-width: 879px) and (max-width: 1320px) {
+  /* General */
+  footer {
+    font-size: 1.5rem;
+  }
+  /* Index */
+  .titulo-int {
+    font-size: 4rem;
+  }
+  /* Tortas Personalizadas */
+  .tp-text {
+    font-size: 2rem;
+  }
+  /* Postres Clasicos */
+  .pc-contenedor {
+    padding: 4rem;
+  }
+  .pc-contenedor-img {
+    width: 40rem;
+    height: 30rem;
+    margin-bottom: 4rem;
+  }
+  .pc-contenedor-text {
+    width: 40rem;
+    height: 30rem;
+  }
+  .pc-contenedor-text-int {
+    width: 39.6rem;
+    height: 29.6rem;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+  .pc-contenedor-text-int-subtitulo {
+    font-size: 2rem;
+  }
+  /* Contacto */
+  .contacto-text {
+    font-size: 3rem;
+  }
+  .contacto-borde {
+    width: 80rem;
+    height: 100rem;
+  }
+  .contacto-borde-ext {
+    width: 79.6rem;
+    height: 99.6rem;
+  }
+  .contacto-borde-ext-form {
+    width: 75rem;
+    height: 95rem;
+    font-size: 2rem;
+  }
+  .contacto-borde-ext-form-tipo1, .contacto-borde-ext-form-tipo2, .contacto-borde-ext-form-tipo3 {
+    width: 75rem;
+    height: 5rem;
+  }
+  .contacto-borde-ext-form-tipo2 {
+    width: 75rem;
+    height: 40rem;
+  }
+  .contacto-borde-ext-form-tipo3 {
+    width: 15rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

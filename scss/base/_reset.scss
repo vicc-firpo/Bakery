@@ -17,31 +17,33 @@ img {
 
 //header
 
-img.logo {
-    @include sizes(14rem, null);
-}
-
 .encabezado {
     @include flex(wrap, space-around, center, null);
-}
 
-.menu {
-    @include flex(wrap, space-around, center, null);
-    font-family: $tipografia_principal;
-    @include sizes(100rem, null);
-    font-size: map-get($map: $font_sizes, $key: s);
-}
-
-.nav-link {
-    @include color_fuente;
-    font-weight: $principal_weight_font;
-    text-decoration: none;
-    font-size: map-get($map: $font_sizes, $key: s);
-    .hover {
-        background: $color3;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+    img.logo {
+        @include sizes(18rem, null);
     }
+
+    .menu {
+        @include flex(wrap, space-around, center, null);
+        font-family: $tipografia_principal;
+        @include sizes(100rem, null);
+        font-size: map-get($map: $font_sizes, $key: s);
+
+        .nav-link {
+            @include color_fuente;
+            font-weight: $principal_weight_font;
+            text-decoration: none;
+            font-size: map-get($map: $font_sizes, $key: s);
+            &:hover {
+                background: $color3;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+
+    }
+
+}
 }
 
 //section
@@ -53,7 +55,7 @@ section {
 //footer
 
 footer {
-    @include flex(null, null, null, column);
+    @include flex(wrap, null, null, column);
     @include sizes(null, 30rem);
     font-family: $tipografia_principal;
     color: $color3;
@@ -61,19 +63,20 @@ footer {
     @include gradiente;
     .copy {
         padding: 2rem 0;
-        @include flex(null, center, center, null);
+        @include flex(wrap, center, center, null);
+        text-align: center;
     }
     .rs {
         @extend .copy;
         &-icon {
             padding: 0 1rem;
-
             &-links {
                 color: $color3;
             }
-        }   
+        }  
     }
-    .info p {
-        @include flex(null, center, center, null);
+    .info {
+        @include flex(wrap, center, null, null);
+        text-align: center;
     }
 }

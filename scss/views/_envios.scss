@@ -1,0 +1,38 @@
+
+.envios {
+
+    @include flex(wrap, center, center, column);
+    padding: 6rem 0;
+
+    &-text {
+
+        @include flex(wrap, center, center, null);
+        font-family: $tipografia_principal;
+        font-size: map-get($map: $font_sizes, $key: m);
+        padding: 3rem 0;
+        @include sizes(100rem, null);
+        font-weight: $principal_weight_font;
+        @include color_fuente;
+        text-align: center;
+
+    }
+
+    &-borde {
+
+        @include flex(wrap, center, center, null);
+        @include gradiente;
+        z-index: 1;
+        @include sizes(65rem, 50rem);
+        
+        &-contenedor {
+
+            @include flex(wrap, center, center, null);
+            background-color: white;
+            padding: 2rem 3rem;
+            @include sizes(64.6rem, 49.6rem)
+
+        }
+
+    }
+
+}

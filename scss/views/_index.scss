@@ -1,0 +1,36 @@
+
+.slide {
+
+    padding-top: 2rem;
+
+}
+
+.titulo {
+
+    @include flex(wrap, center, center, null);
+    
+    &-int {
+
+        @include flex(wrap, center, null, null);
+        padding: 5rem 0;
+        font-size: map-get($map: $font_sizes, $key: xl);
+        font-family: $tipografia_principal;
+        font-weight: $principal_weight_font;
+        text-align: center;
+        @include color_fuente;
+
+    }
+
+}
+
+.torta {
+
+    @include flex(wrap, space-around, null, null);
+
+    &-int {
+
+        @include sizes(40rem, null);    
+
+    }
+
+}

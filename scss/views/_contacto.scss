@@ -1,0 +1,97 @@
+
+.contacto {
+
+    @include flex(wrap, center, center, column);
+    padding: 6rem 0;
+
+    &-text {
+
+        @include flex(wrap, center, center, null);
+        font-family: $tipografia_principal;
+        font-size: map-get($map: $font_sizes, $key: m);
+        font-weight: $principal_weight_font;
+        @include color_fuente;
+        padding: 2rem 0;
+        text-align: center;
+
+    }
+
+    &-borde {
+
+        @include flex(wrap, center, center, null);
+        @include gradiente;
+        z-index: 1;
+        border-radius: 2rem;
+        @include sizes(120rem, 110rem);
+
+        &-ext {
+
+            @include flex(wrap, center, center, null);
+            @include sizes(119.6rem, 109.6rem);
+            background-color: $color3;
+            border-radius: 2rem;
+
+            &-form {
+
+                @include flex(wrap, center, center, column);
+                font-size: map-get($map: $font_sizes, $key: m);
+                font-family: $tipografia_principal;
+                @include sizes(110rem, 100rem);
+
+                &-tipo1 {
+
+                    @include flex(wrap, center, center, null);
+                    border-radius: 1rem;
+                    border: none;
+                    padding: 1rem 2rem;
+                    @include gradiente;
+                    color: $color3;
+                    @include sizes(110rem, 6rem);
+    
+                }
+    
+                &-tipo2 {
+    
+                    @extend .contacto-borde-ext-form-tipo1;
+                    @include sizes(110rem, 25rem);
+    
+                }
+    
+                &-tipo3 {
+    
+                    @extend .contacto-borde-ext-form-tipo1;
+                    @include sizes(20rem, null);
+    
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+#nombre::placeholder {
+
+    color: $color3;
+
+   }
+
+#mail::placeholder {
+
+    color: $color3;
+
+}
+
+#cel::placeholder {
+
+    color: $color3;
+
+}
+
+#mensaje::placeholder {
+
+    color: $color3;
+
+   }
