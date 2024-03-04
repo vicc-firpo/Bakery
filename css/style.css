@@ -130,6 +130,26 @@ footer .info {
   padding: 2rem 3rem;
   text-align: center;
 }
+.tp-ext {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100rem;
+  height: 54rem;
+}
+.tp-ext-img {
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+.tp-ext-img:hover {
+  width: 30rem;
+  opacity: 1;
+  filter: contrast(120%);
+}
 
 .pc-contenedor {
   display: flex;
@@ -315,6 +335,10 @@ footer .info {
 }
 .contacto-borde-ext-form-tipo3 {
   width: 20rem;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
 
 #nombre::placeholder {

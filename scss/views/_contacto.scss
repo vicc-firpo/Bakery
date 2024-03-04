@@ -72,6 +72,10 @@
 
 }
 
+::-webkit-scrollbar {
+    @include sizes(0, null);
+}
+
 #nombre::placeholder {
 
     color: $color3;

@@ -15,4 +15,29 @@
 
     }
 
+    &-ext {
+
+        @include flex(wrap, center, center, null);
+        @include sizes(100rem, 54rem);
+
+        &-img {
+
+            @include sizes(0, null);
+            flex-grow: 1;
+            object-fit: cover;
+            opacity: .8;
+            transition: .5s ease;
+
+            &:hover {
+
+                @include sizes(30rem, null);
+                opacity: 1;
+                filter: contrast(120%);
+
+            }
+
+        }
+
+    }
+
 }
