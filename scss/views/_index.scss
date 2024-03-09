@@ -1,7 +1,7 @@
 
-.slide {
+.carousel-item {
 
-    padding-top: 2rem;
+    @include sizes(190rem, 80rem);
 
 }
 
@@ -13,7 +13,7 @@
 
         @include flex(wrap, center, null, null);
         padding: 5rem 0;
-        font-size: map-get($map: $font_sizes, $key: xl);
+        font-size: map-get($map: $font_sizes, $key: m);
         font-family: $tipografia_principal;
         font-weight: $principal_weight_font;
         text-align: center;
@@ -23,14 +23,78 @@
 
 }
 
-.torta {
+.contenedor {
 
-    @include flex(wrap, space-around, null, null);
+    @include flex(wrap, center, null, null);
+    gap: 7rem;
+    padding-bottom: 7rem;
 
     &-int {
 
-        @include sizes(40rem, null);    
+        @include flex(wrap, center, null, null);
+        gap: 7rem;
+
+        &-card {
+
+            @include sizes(35rem, 40rem);
+            border-radius: 3rem;
+            box-shadow: 0.5rem 0.5rem 2rem $color1;
+            overflow: hidden;
+
+            &-img {
+
+                @include sizes(35rem, 40rem);    
+                border-radius: 3rem;
+                transition: all 0.5s;
+    
+            }
+
+            &-intro {
+
+                @include sizes(35rem, 25rem);
+                font-family: $tipografia_principal;
+                color: $color4;
+                text-align: center;
+                font-weight: $principal_weight_font;
+                background: rgb(124, 69, 69, 0.6);
+                box-sizing: border-box;
+                position: relative;
+                bottom: 3.7rem;
+                transition: all 0.5s;
+
+                &-titulo {
+
+                    font-size: 2.5rem;
+
+                }
+
+                &-des {
+
+                    font-size: 2rem;
+                    padding: 1rem 2rem;
+
+                }
+
+            }
+
+            &:hover .contenedor-int-card-intro {
+
+                transition: 0.5s ease;
+                bottom: 19rem;
+                background: rgb(124, 69, 69, 0.8);
+
+            }
+
+            &:hover .contenedor-int-card-img {
+
+                transform: scale(1.1) rotate(-3deg);
+
+            }
+
+        }
 
     }
 
 }
+
+

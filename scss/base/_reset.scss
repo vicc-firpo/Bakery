@@ -18,65 +18,121 @@ img {
 //header
 
 .encabezado {
+
     @include flex(wrap, space-around, center, null);
+    @include gradiente;
 
     img.logo {
-        @include sizes(18rem, null);
+
+        @include sizes(12rem, null);
+
     }
 
     .menu {
+
         @include flex(wrap, space-around, center, null);
         font-family: $tipografia_principal;
         @include sizes(100rem, null);
-        font-size: map-get($map: $font_sizes, $key: s);
+        font-size: map-get($map: $font_sizes, $key: xxs);
 
         .nav-link {
-            @include color_fuente;
+
+            color: $color3;
             font-weight: $principal_weight_font;
-            text-decoration: none;
-            font-size: map-get($map: $font_sizes, $key: s);
+            font-size: map-get($map: $font_sizes, $key: xs);
+
             &:hover {
-                background: $color3;
-                -webkit-text-fill-color: transparent;
-                -webkit-background-clip: text;
-            }
+                color: $color4;
+            } 
 
     }
 
 }
+
 }
 
 //section
 
 section {
-    background-color: $principal_background_color;
+
+    background-color: $color3;
+    
 }
 
 //footer
 
 footer {
+
     @include flex(wrap, null, null, column);
     @include sizes(null, 30rem);
     font-family: $tipografia_principal;
     color: $color3;
     font-size: map-get($map: $font_sizes, $key: xs);
     @include gradiente;
+
+    .cont {
+
+        @include flex(wrap, center, center, row);
+        @include sizes(null, 25rem);
+        gap: 40rem;
+
+        &-logo {
+
+            @include sizes(16rem, 16rem);
+
+            &-int {
+
+                @include sizes(15rem, 15rem);
+
+                &:hover {
+
+                    @include sizes(15.5rem, 15.5rem);
+                    transition: all 0.5s;
+
+                }
+
+            }
+
+        }
+
+        &-rs {
+
+            @extend .copy;
+
+            &-icon {
+
+                padding: 0 1rem;
+
+                &-links {
+
+                    color: $color3;
+
+                    &:hover {
+
+                        color: $color4;
+                        transition: all 0.5s;
+
+                    }
+
+                }
+
+            }  
+
+        }
+        &-info {
+
+            @include flex(wrap, center, null, null);
+            text-align: center;
+
+        }
+
+    }
+
     .copy {
-        padding: 2rem 0;
+
         @include flex(wrap, center, center, null);
         text-align: center;
+
     }
-    .rs {
-        @extend .copy;
-        &-icon {
-            padding: 0 1rem;
-            &-links {
-                color: $color3;
-            }
-        }  
-    }
-    .info {
-        @include flex(wrap, center, null, null);
-        text-align: center;
-    }
+
 }

@@ -6,27 +6,45 @@
 
     &-text {
 
+        @include sizes(150rem, null);
         font-family: $tipografia_principal;
-        font-size: map-get($map: $font_sizes, $key: m);
+        font-size: map-get($map: $font_sizes, $key: s);
         @include color_fuente;
         font-weight: $principal_weight_font;
-        padding: 2rem 3rem;
+        padding: 2rem;
         text-align: center;
+
+        &-cont {
+
+            background: $color1;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            font-weight: $principal_weight_font;
+
+            &:hover {
+
+                background: $color5;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+
+            }
+
+        }
 
     }
 
     &-ext {
 
         @include flex(wrap, center, center, null);
-        @include sizes(100rem, 54rem);
+        @include sizes(140rem, 54rem);
 
         &-img {
 
-            @include sizes(0, null);
+            @include sizes(0, 50rem);
             flex-grow: 1;
             object-fit: cover;
-            opacity: .8;
-            transition: .5s ease;
+            opacity: 0.8;
+            transition: 0.5s ease;
 
             &:hover {
 

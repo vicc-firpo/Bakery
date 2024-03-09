@@ -1,15 +1,47 @@
 
 .pc {
 
+    @include flex(wrap, center, null, null);
+    padding-bottom: 7rem;
+
     &-contenedor {
 
-        @include flex(wrap, space-evenly, null, null);
-        padding: 6rem;
+        @include flex(wrap, center, center, null);
+        gap: 7rem;
+        padding-top: 7rem;
+
+        &-linea {
+
+            position: absolute;
+            @include sizes(130rem, 0.4rem);
+            @include gradiente;
+            z-index: 0;
+
+        }
 
         &-img {
 
-            @include sizes(60rem, 50rem);
-            padding: 2rem 3rem;
+            @include flex(wrap, center, center, null);
+            @include sizes(40rem, 25rem);
+            z-index: 1;
+            overflow: hidden;
+            border-radius: 5rem;
+            box-shadow: 0.5rem 0.5rem 2rem $color1;
+
+            &-int {
+
+                @include sizes(40rem, 25rem);
+                border-radius: 5rem;
+                transition: all 0.5s;
+
+            }
+
+            &:hover .pc-contenedor-img-int {
+
+                @include sizes(42rem, 27rem);
+                transform: scale(1.1) rotate(-3deg);
+
+            }
 
         }
 
@@ -19,23 +51,23 @@
             @include gradiente;
             z-index: 1;
             border-radius: 4rem;
-            @include sizes(60rem, 50rem);
+            @include sizes(50rem, 45rem);
 
             &-int {
 
                 @include flex(wrap, center, center, column);
                 font-family: $tipografia_principal;
-                font-size: map-get($map: $font_sizes, $key: m);
-                @include sizes(59.6rem, 49.6rem);
-                padding: 2rem 3rem;
+                font-size: map-get($map: $font_sizes, $key: s);
+                @include sizes(49.6rem, 44.6rem);
                 color: black;
-                background-color: white;
+                background-color: $color4;
                 border-radius: 4rem;
+                text-align:center;
 
                 &-subtitulo {
 
                     @include flex(wrap, center, center, null);
-                    font: map-get($map: $font_sizes, $key: l);
+                    font: map-get($map: $font_sizes, $key: s);
                     @include color_fuente;
                     font-weight: $principal_weight_font;
 
@@ -49,11 +81,19 @@
 
                         @include flex(wrap, center, center, null);
                         border: none;
-                        @include gradiente;
-                        color: $color3;
-                        @include sizes(20rem, null);
+                        background: $color3;
+                        color: $color1;
+                        @include sizes(15rem, null);
                         border-radius: 4rem;
-                        padding: 1rem 2rem;
+                        padding: 1rem;
+
+                        &:hover {
+
+                            transition: all 0.5s;
+                            @include gradiente;
+                            color: $color4;
+
+                        }
 
                     }
 

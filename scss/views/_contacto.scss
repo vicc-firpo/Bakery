@@ -22,46 +22,103 @@
         @include gradiente;
         z-index: 1;
         border-radius: 2rem;
-        @include sizes(120rem, 110rem);
+        @include sizes(95rem, 75rem);
+        box-shadow: 0.5rem 0.5rem 2rem $color2;
 
         &-ext {
 
-            @include flex(wrap, center, center, null);
-            @include sizes(119.6rem, 109.6rem);
-            background-color: $color3;
+            @include flex(wrap, center, center, column);
+            @include sizes(94.6rem, 74.6rem);
+            background-color: $color4;
             border-radius: 2rem;
 
-            &-form {
+            &-cont1 {
 
-                @include flex(wrap, center, center, column);
-                font-size: map-get($map: $font_sizes, $key: m);
-                font-family: $tipografia_principal;
-                @include sizes(110rem, 100rem);
+                @include flex(wrap, center, center, row);
+                @include sizes(95rem, 30rem);
+                gap: 5rem;
 
-                &-tipo1 {
+                &-form {
 
-                    @include flex(wrap, center, center, null);
-                    border-radius: 1rem;
-                    border: none;
-                    padding: 1rem 2rem;
-                    @include gradiente;
-                    color: $color3;
-                    @include sizes(110rem, 6rem);
+                    @include flex(wrap, center, null, column);
+                    font-size: map-get($map: $font_sizes, $key: s);
+                    font-family: $tipografia_principal;
+                    @include sizes(50rem, 30rem);
+    
+                    &-tipo1 {
+    
+                        border-radius: 1rem;
+                        border: none;
+                        padding: 0 1rem;
+                        background-color: $color3;
+                        color: $color1;
+                        @include sizes(50rem, 4rem);
+        
+                    }
     
                 }
     
-                &-tipo2 {
+                &-img {
     
-                    @extend .contacto-borde-ext-form-tipo1;
-                    @include sizes(110rem, 25rem);
+                    @include sizes(26rem, 26rem);
+
+                    &-int {
+
+                        @include sizes(25rem, 25rem);
+
+                        &:hover {
+
+                            @include sizes(25.5rem, 25.5rem);
+                            transition: all 0.5s;
+
+                        }
+
+                    }
+
     
                 }
+
+            }
+
+            &-cont2 {
+
+                @include flex(wrap, center, center, row);
+                @include sizes(95rem, 35rem);
+                column-gap: 2rem;
+
+                &-form {
+
+                    @include flex(wrap, center, center, column);
+                    font-size: map-get($map: $font_sizes, $key: s);
+                    font-family: $tipografia_principal;
+                    @include sizes(110rem, 35rem);
+                    column-gap: 2rem;
+
+                    &-tipo2 {
+        
+                        @extend .contacto-borde-ext-cont1-form-tipo1;
+                        @include sizes(80rem, 25rem);
+        
+                    }
+        
+                    &-tipo3 {
+        
+                        @extend .contacto-borde-ext-cont1-form-tipo1;
+                        @include sizes(20rem, 5rem);
+                        border: none;
+                        background: $color3;
+                        color: $color1;
     
-                &-tipo3 {
+                        &:hover {
     
-                    @extend .contacto-borde-ext-form-tipo1;
-                    @include sizes(20rem, null);
+                            transition: all 0.5s;
+                            @include gradiente;
+                            color: $color4;
     
+                        }
+        
+                    }
+
                 }
 
             }
@@ -78,24 +135,24 @@
 
 #nombre::placeholder {
 
-    color: $color3;
+    color: $color1;
 
    }
 
 #mail::placeholder {
 
-    color: $color3;
+    color: $color1;
 
 }
 
 #cel::placeholder {
 
-    color: $color3;
+    color: $color1;
 
 }
 
 #mensaje::placeholder {
 
-    color: $color3;
+    color: $color1;
 
    }

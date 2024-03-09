@@ -23,13 +23,22 @@
         @include gradiente;
         z-index: 1;
         @include sizes(65rem, 50rem);
+        border-radius: 4rem;
+        box-shadow: 0.5rem 0.5rem 2rem $color2;
         
         &-contenedor {
 
             @include flex(wrap, center, center, null);
-            background-color: white;
+            background-color: $color4;
             padding: 2rem 3rem;
-            @include sizes(64.6rem, 49.6rem)
+            @include sizes(64.6rem, 49.6rem);
+            border-radius: 4rem;
+
+            &-map {
+
+                border-radius: 4rem;
+
+            }
 
         }
 
