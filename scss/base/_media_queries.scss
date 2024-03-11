@@ -5,104 +5,485 @@
 
     footer {
         font-size: map-get($map: $font_sizes, $key: xxs);
+
+        .cont {
+
+            flex-direction: column;
+            gap: 3rem;
+    
+            &-logo {
+    
+                visibility: hidden;
+                position:absolute;
+    
+            }
+
+        }
+
     }
 
     /* Index */
 
+    .carousel-item {
+
+        @include sizes(null, 50vw);
+    
+    }
+
     .titulo-int {
-        font-size: map-get($map: $font_sizes, $key: xs);
+
+        font-size: 1.5rem;
+
+    }
+
+    .contenedor-int-card {
+
+        @include sizes(30rem, 35rem);
+
+        &-img {
+
+            @include sizes(30rem, 35rem);
+
+        }
+
+        &-intro {
+
+            @include sizes(30rem, 20rem);
+
+            &-titulo {
+
+                font-size: 2rem;
+
+            }
+
+        }
+
     }
 
     /* Tortas Personalizadas */
 
-    .tp-text {
-        font-size: map-get($map: $font_sizes, $key: xxs);
+    .tp {
+
+        padding: 1rem;
+
+        &-text {
+
+            @include sizes(90vw, null);
+            font-size: 1.2rem;
+
+        }
+
+        &-carousel {
+
+            visibility: visible;
+            position: relative;
+            @include sizes(40vw, null);
+
+        }
+
+        &-ext {
+
+            @include sizes(0, null);
+            visibility: hidden;
+            position: absolute;
+
+        }
+
     }
+
 
     /* Postres Clasicos */
 
     .pc-contenedor {
+
+        @include sizes(100vw, null);
         padding: 3rem;
+        gap: 2rem;
+
+        &-linea {
+
+            visibility: hidden;
+            position: absolute;
+            @include sizes(0, null);
+
+        }
+
+        &-img {
+
+            @include sizes(25rem, 15rem);
+
+            &-int {
+    
+                @include sizes(25rem, 15rem);
+    
+            }
+
+        }
+
+        &-text {
+
+            @include sizes(25rem, 25rem);
+
+            &-int {
+
+                @include sizes(24.6rem, 24.6rem);
+                font-size: 1rem;
+                padding: 1rem 2rem;
+
+                &-subtitulo {
+
+                    font-size: map-get($map: $font_sizes, $key: xxs);
+
+                }
+
+            }
+
+        }
+
     }
 
     .al_reves {
+
         @include flex(wrap, center, center, column-reverse);
-    }
 
-    .pc-contenedor-img {
-        @include sizes(30rem, 20rem);
-        margin-bottom: 4rem;
-    }
-
-    .pc-contenedor-text {
-        @include sizes(30rem, 20rem);
-    }
-
-    .pc-contenedor-text-int {
-        @include sizes(29.6rem, 19.6rem);
-        font-size: 1rem;
-        padding: 1rem 2rem;
-    }
-
-    .pc-contenedor-text-int-subtitulo {
-        font-size: map-get($map: $font_sizes, $key: xxs);
     }
 
     /* Envios */
 
     .envios {
-        @include flex(null, center, null, null);
+
         padding: 3rem 0;
-    }
 
-    .envios-text {
-        font-size: map-get($map: $font_sizes, $key: xs);
+        &-text {
+
+        font-size: map-get($map: $font_sizes, $key: xxs);
         padding: 1rem 0;
-        @include sizes(25rem, null);
-        text-align: center;
-    }
+        @include sizes(80vw, null);
 
-    .map {
-        @include sizes(28rem, 18rem);
-    }
+        }
 
-    .envios-borde {
-        @include sizes(30.6rem, 20.6rem);
-    }
+        &-borde {
 
-    .envios-borde-contenedor {
-        @include sizes(30rem, 20rem);
+            @include sizes(80vw, 70vw);
+
+            &-contenedor {
+
+                @include sizes(79.6vw, 69.6vw);
+
+                &-map {
+
+                    @include sizes(70vw, 60vw);
+
+                    &-int {
+
+                        @include sizes(70vw, 60vw);
+
+                    }
+
+                }
+
+            }
+
+        }
+
     }
 
     /* Contacto */
 
-    .contacto-text {
-        font-size: map-get($map: $font_sizes, $key: xs);
+    .contacto {
+
+        padding: 1rem;
+
+        &-text {
+
+            padding-bottom: 2rem;
+            @include sizes(80vw, null);
+            font-size: map-get($map: $font_sizes, $key: xxs);
+        }
+
+        &-borde {
+
+            @include sizes(90vw, 140vw);
+
+            &-ext {
+
+                padding: 0;
+                align-items: center;
+                flex-direction: column;
+                @include sizes(89.6vw, 139.6vw);
+
+                &-cont1 {
+
+                    @include flex(wrap, center, center, column);
+                    @include sizes(80vw, 50vw);
+    
+                    &-form {
+    
+                        @include flex(wrap, center, center, column);
+                        font-size: map-get($map: $font_sizes, $key: xxs);
+                        @include sizes(80vw, 50vw);
+        
+                        &-tipo1 {
+        
+                            @include sizes(70vw, 7vw);
+            
+                        }
+        
+                    }
+        
+                    &-img {
+        
+                        @include sizes(0, 0);
+    
+                        &-int {
+    
+                            @include sizes(0, 0);
+    
+                        }
+    
+        
+                    }
+    
+                }
+    
+                &-cont2 {
+    
+                    @include sizes(80vw, 70vw);
+    
+                    &-form {
+    
+                        @include flex(wrap, center, center, column);
+                        font-size: map-get($map: $font_sizes, $key: xxs);
+                        @include sizes(80vw, 70vw);
+    
+                        &-tipo2 {
+            
+                            @include sizes(70vw, 50vw);
+            
+                        }
+            
+                        &-tipo3 {
+                
+                            @include sizes(20vw, 10vw);
+            
+                        }
+    
+                    }
+    
+                }
+
+            }
+
+        }   
+
     }
 
-    .contacto-borde {
-        @include sizes(30rem, 70rem);
+}
+
+@media only screen and (min-width: 400px) and (max-width: 580px) {
+
+    /* Contacto */
+
+    .contacto {
+
+        padding: 2rem;
+
+        &-text {
+
+            padding-bottom: 2rem;
+            @include sizes(70vw, null);
+            font-size: map-get($map: $font_sizes, $key: xxs);
+        }
+
+        &-borde {
+
+            @include sizes(80vw, 120vw);
+
+            &-ext {
+
+                padding: 0;
+                align-items: center;
+                flex-direction: column;
+                @include sizes(79.6vw, 119.6vw);
+
+                &-cont1 {
+
+                    @include flex(wrap, center, center, column);
+                    @include sizes(80vw, 40vw);
+    
+                    &-form {
+    
+                        @include flex(wrap, center, center, column);
+                        font-size: map-get($map: $font_sizes, $key: xxs);
+                        @include sizes(80vw, 45vw);
+        
+                        &-tipo1 {
+        
+                            @include sizes(70vw, 6vw);
+            
+                        }
+        
+                    }
+        
+                    &-img {
+        
+                        @include sizes(0, 0);
+    
+                        &-int {
+    
+                            @include sizes(0, 0);
+    
+                        }
+    
+        
+                    }
+    
+                }
+    
+                &-cont2 {
+    
+                    @include sizes(80vw, 60vw);
+    
+                    &-form {
+    
+                        @include flex(wrap, center, center, column);
+                        font-size: map-get($map: $font_sizes, $key: xxs);
+                        @include sizes(80vw, 60vw);
+    
+                        &-tipo2 {
+            
+                            @include sizes(70vw, 40vw);
+            
+                        }
+            
+                        &-tipo3 {
+                
+                            @include sizes(18vw, 8vw);
+            
+                        }
+    
+                    }
+    
+                }
+
+            }
+
+        }   
+
     }
 
-    .contacto-borde-ext {
-        @include sizes(29.6rem, 69.6rem);
+}
+
+@media only screen and (min-width: 580px) and (max-width: 645px) {
+
+    /* Postres Clasicos */
+
+    .pc-contenedor {
+
+        &-linea {
+
+            visibility: visible;
+            position: absolute;
+            @include sizes(95vw, null);
+
+        }
+
     }
 
-    .contacto-borde-ext-form {
-        @include sizes(25rem, 65rem);
-        font-size: 1rem
+    .al_reves {
+
+        @include flex(wrap, center, center, row);
+
     }
 
-    .contacto-borde-ext-form-tipo1 {
-        @include sizes(25rem, 3.5rem);
-    }
+    /* Contacto */
 
-    .contacto-borde-ext-form-tipo2 {
-        @include sizes(25rem, 30rem);
-    }
+    .contacto {
 
-    .contacto-borde-ext-form-tipo3 {
-        @include sizes(5rem, null);
+        padding: 3rem;
+
+        &-text {
+
+            padding-bottom: 2rem;
+            @include sizes(60vw, null);
+            font-size: map-get($map: $font_sizes, $key: xxs);
+        }
+
+        &-borde {
+
+            @include sizes(70vw, 105vw);
+
+            &-ext {
+
+                padding: 0;
+                align-items: center;
+                flex-direction: column;
+                @include sizes(69.6vw, 104.6vw);
+
+                &-cont1 {
+
+                    @include flex(wrap, center, center, column);
+                    @include sizes(60vw, 35vw);
+    
+                    &-form {
+    
+                        @include flex(wrap, center, center, column);
+                        font-size: map-get($map: $font_sizes, $key: xxs);
+                        @include sizes(60vw, 35vw);
+        
+                        &-tipo1 {
+        
+                            @include sizes(50vw, 5vw);
+            
+                        }
+        
+                    }
+        
+                    &-img {
+        
+                        @include sizes(0, 0);
+    
+                        &-int {
+    
+                            @include sizes(0, 0);
+    
+                        }
+    
+        
+                    }
+    
+                }
+    
+                &-cont2 {
+    
+                    @include sizes(60vw, 60vw);
+    
+                    &-form {
+    
+                        @include flex(wrap, center, center, column);
+                        font-size: map-get($map: $font_sizes, $key: xxs);
+                        @include sizes(60vw, 60vw);
+    
+                        &-tipo2 {
+            
+                            @include sizes(50vw, 40vw);
+            
+                        }
+            
+                        &-tipo3 {
+                
+                            @include sizes(15vw, 6vw);
+            
+                        }
+    
+                    }
+    
+                }
+
+            }
+
+        }   
+
     }
 
 }
@@ -112,88 +493,242 @@
     /* General */
 
     footer {
-        font-size: map-get($map: $font_sizes, $key: xxs);
+
+        font-size: map-get($map: $font_sizes, $key: xs);
+
+        .cont {
+
+            flex-direction: column;
+            gap: 3rem;
+    
+            &-logo {
+    
+                visibility: hidden;
+                position:absolute;
+    
+            }
+
+        }
+
     }
 
     /* Index */
 
+    .carousel-item {
+
+        @include sizes(null, 40vw);
+    
+    }
+
     .titulo-int {
-        font-size: 4rem;
+
+        font-size: 2rem;
+
     }
 
     /* Tortas Personalizadas */
 
-    .tp-text {
-        font-size: map-get($map: $font_sizes, $key: xs);
+    .tp {
+
+        padding: 2rem;
+
+        &-text {
+
+            @include sizes(90vw, null);
+            font-size: map-get($map: $font_sizes, $key: xs);
+            padding: 1rem;
+
+        }
+
+        &-ext {
+
+            @include sizes(60rem, 40rem);
+
+            &-img {
+
+                @include sizes(0, 40rem);
+
+            }
+
+        }
+
     }
 
     /* Postres Clasicos */
 
-    .pc-contenedor {
-        padding: 4rem;
-    }
+    .pc {
 
-    .al_reves {
-        @include flex(wrap, center, center, column-reverse);
-    }
+        padding-bottom: 5rem;
+    
+        &-contenedor {
+    
+            gap: 5rem;
+            padding-top: 3rem;
+    
+            &-linea {
+    
+                @include sizes(90vw, null);
 
-    .pc-contenedor-img {
-        @include sizes(40rem, 30rem);
-        margin-bottom: 4rem;
-    }
+            }
+    
+            &-img {
 
-    .pc-contenedor-text {
-        @include sizes(40rem, 30rem);
-    }
+                @include sizes(25rem, 15rem);
+    
+                &-int {
+        
+                    @include sizes(25rem, 15rem);
+        
+                }
+    
+            }
+    
+            &-text {
 
-    .pc-contenedor-text-int {
-        @include sizes(39.6rem, 29.6rem);
-        font-size: map-get($map: $font_sizes, $key: xxs);
-        padding: 1rem 2rem;
-    }
-
-    .pc-contenedor-text-int-subtitulo {
-        font-size: map-get($map: $font_sizes, $key: xs);
+                @include sizes(25rem, 27rem);
+    
+                &-int {
+    
+                    @include sizes(24.6rem, 26.6rem);
+                    font-size: 1.3rem;
+                    padding: 1rem 2rem;
+    
+                    &-subtitulo {
+    
+                        font-size: 2rem;
+    
+                    }
+    
+                }
+    
+            }
+    
+        }
+    
     }
 
     /* Envios */
 
-    .envios-text {
-        font-size: map-get($map: $font_sizes, $key: s);
-        padding: 1rem 0;
-        @include sizes(50rem, null);
-        text-align: center;
+    .envios {
+
+        &-text {
+
+            font-size: map-get($map: $font_sizes, $key: xs);
+            padding: 1rem 0;
+            @include sizes(60rem, null);
+    
+        }
+
+        &-borde {
+
+            @include sizes(60rem, 45rem);
+            
+            &-contenedor {
+    
+                padding: 2rem 3rem;
+                @include sizes(59.6rem, 44.6rem);
+    
+                &-map {
+    
+                    @include sizes(55rem, 40rem);
+
+                    &-int {
+    
+                        @include sizes(55rem, 40rem);
+    
+                    }
+    
+                }
+    
+            }
+    
+        }
+
     }
 
     /* Contacto */
 
-    .contacto-text {
-        font-size: map-get($map: $font_sizes, $key: m);
-    }
+    .contacto {
 
-    .contacto-borde {
-        @include sizes(60rem, 100rem);
-    }
+        padding: 3rem 1rem;
 
-    .contacto-borde-ext {
-        @include sizes(59.6rem, 99.6rem);
-    }
+        &-text {
 
-    .contacto-borde-ext-form {
-        @include sizes(55rem, 95rem);
-        font-size: map-get($map: $font_sizes, $key: xs);
-    }
+            padding-bottom: 2rem;
+            @include sizes(60rem, null);
+            font-size: map-get($map: $font_sizes, $key: xs);
+        }
 
-    .contacto-borde-ext-form-tipo1 {
-        @include sizes(55rem, 5rem);
-    }
+        &-borde {
 
-    .contacto-borde-ext-form-tipo2 {
-        @include sizes(55rem, 40rem);
-    }
+            @include sizes(60rem, 70rem);
 
-    .contacto-borde-ext-form-tipo3 {
-        @include sizes(12rem, null);
+            &-ext {
+
+                padding: 0;
+                @include sizes(59.6rem, 69.6rem);
+
+                &-cont1 {
+
+                    @include sizes(60rem, 30rem);
+    
+                    &-form {
+    
+                        font-size: map-get($map: $font_sizes, $key: xs);
+                        @include sizes(60rem, 30rem);
+        
+                        &-tipo1 {
+        
+                            @include sizes(50rem, 4rem);
+            
+                        }
+        
+                    }
+        
+                    &-img {
+        
+                        @include sizes(0, 0);
+    
+                        &-int {
+    
+                            @include sizes(0, 0);
+    
+                        }
+    
+        
+                    }
+    
+                }
+    
+                &-cont2 {
+    
+                    @include sizes(60rem, 35rem);
+    
+                    &-form {
+    
+                        font-size: map-get($map: $font_sizes, $key: xs);
+                        @include sizes(60rem, 35rem);
+    
+                        &-tipo2 {
+            
+                            @include sizes(50rem, 25rem);
+            
+                        }
+            
+                        &-tipo3 {
+                
+                            @include sizes(10rem, 4rem);
+            
+                        }
+    
+                    }
+    
+                }
+
+            }
+
+        }   
+
     }
 
 }
@@ -203,75 +738,322 @@
     /* General */
 
     footer {
-        font-size: map-get($map: $font_sizes, $key: xxs);
+
+        font-size: map-get($map: $font_sizes, $key: xs);
+
+        .cont {
+
+            gap: 10rem;
+
+            &-logo {
+
+                @include sizes(10rem, 10rem);
+
+                &-int {
+
+                    @include sizes(10rem, 10rem);
+
+                    &:hover {
+
+                        @include sizes(11rem, 11rem);
+                        transition: all 0.5s;
+    
+                    }
+                
+                }
+
+            }
+
+        }
+
     }
 
     /* Index */
 
-    .titulo-int {
-        font-size: 4rem;
+    .carousel-item {
+
+        @include sizes(null, 40vw);
+    
     }
 
     /* Tortas Personalizadas */
 
-    .tp-text {
-        font-size: map-get($map: $font_sizes, $key: xs);
+    .tp {
+
+        padding: 2rem;
+
+        &-text {
+
+            @include sizes(80rem, null);
+            font-size: map-get($map: $font_sizes, $key: xs);
+            padding: 1rem;
+
+        }
+
+        &-ext {
+
+            @include sizes(70rem, 40rem);
+
+            &-img {
+
+                @include sizes(0, 40rem);
+
+            }
+
+        }
+
     }
 
     /* Postres Clasicos */
 
-    .pc-contenedor {
-        padding: 4rem;
+    .pc {
+
+        padding-bottom: 7rem;
+    
+        &-contenedor {
+    
+            gap: 7rem;
+            padding-top: 3rem;
+    
+            &-linea {
+    
+                @include sizes(90vw, null);
+
+            }
+    
+            &-img {
+
+                @include sizes(30rem, 20rem);
+    
+                &-int {
+        
+                    @include sizes(30rem, 20rem);
+        
+                }
+    
+            }
+    
+            &-text {
+
+                @include sizes(35rem, 30rem);
+    
+                &-int {
+    
+                    @include sizes(34.6rem, 29.6rem);
+                    font-size: 1.5rem;
+                    padding: 1rem 2rem;
+    
+                    &-subtitulo {
+    
+                        font-size: 2rem;
+    
+                    }
+    
+                }
+    
+            }
+    
+        }
+    
     }
 
-    .pc-contenedor-img {
-        @include sizes(40rem, 30rem);
-        margin-bottom: 4rem;
-    }
+    /* Envios */
 
-    .pc-contenedor-text {
-        @include sizes(40rem, 30rem);
-    }
+    .envios {
 
-    .pc-contenedor-text-int {
-        @include sizes(39.6rem, 29.6rem);
-        font-size: map-get($map: $font_sizes, $key: xxs);
-        padding: 1rem 2rem;
-    }
+        &-text {
 
-    .pc-contenedor-text-int-subtitulo {
-        font-size: map-get($map: $font_sizes, $key: xs);
+            font-size: map-get($map: $font_sizes, $key: xs);
+            padding: 1rem 0;
+            @include sizes(60rem, null);
+    
+        }
+
+        &-borde {
+
+            @include sizes(60rem, 45rem);
+            
+            &-contenedor {
+    
+                padding: 2rem 3rem;
+                @include sizes(59.6rem, 44.6rem);
+    
+                &-map {
+    
+                    @include sizes(55rem, 40rem);
+
+                    &-int {
+    
+                        @include sizes(55rem, 40rem);
+    
+                    }
+    
+                }
+    
+            }
+    
+        }
+
     }
 
     /* Contacto */
 
-    .contacto-text {
-        font-size: map-get($map: $font_sizes, $key: m);
+    .contacto {
+
+        padding: 5rem 0;
+    
+        &-text {
+    
+            font-size: map-get($map: $font_sizes, $key: s);
+            padding: 0;
+            @include sizes(85rem, null);
+    
+        }
+    
+        &-borde {
+    
+            @include sizes(80rem, 75rem);
+    
+            &-ext {
+    
+                @include sizes(79.6rem, 74.6rem);
+    
+                &-cont1 {
+    
+                    @include sizes(80rem, 30rem);
+                    gap: 5rem;
+    
+                    &-form {
+    
+                        font-size: map-get($map: $font_sizes, $key: s);
+                        @include sizes(40rem, 30rem);
+        
+                        &-tipo1 {
+        
+                            padding: 0 1rem;
+                            @include sizes(40rem, 4rem);
+            
+                        }
+        
+                    }
+        
+                    &-img {
+        
+                        @include sizes(20rem, 20rem);
+    
+                        &-int {
+    
+                            @include sizes(19rem, 19rem);
+    
+                            &:hover {
+    
+                                @include sizes(20rem, 20rem);
+                                transition: all 0.5s;
+    
+                            }
+    
+                        }
+    
+        
+                    }
+    
+                }
+    
+                &-cont2 {
+    
+                    @include sizes(80rem, 35rem);
+    
+                    &-form {
+
+                        font-size: map-get($map: $font_sizes, $key: s);
+                        @include sizes(75rem, 30rem);
+    
+                        &-tipo2 {
+            
+                            @include sizes(65rem, 20rem);
+            
+                        }
+            
+                        &-tipo3 {
+            
+                            @include sizes(15rem, 5rem);
+                            padding: 0 1rem;
+            
+                        }
+    
+                    }
+    
+                }
+    
+            }
+    
+        }
+    
     }
 
-    .contacto-borde {
-        @include sizes(80rem, 100rem);
-    }
+}
 
-    .contacto-borde-ext {
-        @include sizes(79.6rem, 99.6rem);
-    }
+@media only screen and (min-width: 1320px) and (max-width: 1559px) {
 
-    .contacto-borde-ext-form {
-        @include sizes(75rem, 95rem);
+    /* General */
+
+    footer {
+
         font-size: map-get($map: $font_sizes, $key: xs);
+
+        .cont {
+
+            gap: 20rem;
+
+            &-logo {
+
+                @include sizes(16rem, 16rem);
+
+                &-int {
+
+                    @include sizes(15rem, 15rem);
+
+                    &:hover {
+
+                        @include sizes(16rem, 16rem);
+                        transition: all 0.5s;
+    
+                    }
+                
+                }
+
+            }
+
+        }
+
     }
 
-    .contacto-borde-ext-form-tipo1 {
-        @include sizes(75rem, 5rem);
-    }
+    /* Tortas Personalizadas */
 
-    .contacto-borde-ext-form-tipo2 {
-        @include sizes(75rem, 40rem);
-    }
+    .tp {
 
-    .contacto-borde-ext-form-tipo3 {
-        @include sizes(15rem, null);
+        padding: 2rem;
+
+        &-text {
+
+            @include sizes(100rem, null);
+            font-size: map-get($map: $font_sizes, $key: xs);
+            padding: 1rem;
+
+        }
+
+        &-ext {
+
+            @include sizes(90rem, 50rem);
+
+            &-img {
+
+                @include sizes(0, 50rem);
+
+            }
+
+        }
+
     }
 
 }

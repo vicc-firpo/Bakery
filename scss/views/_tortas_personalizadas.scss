@@ -33,6 +33,13 @@
 
     }
 
+    &-carousel {
+
+        visibility: hidden;
+        position: absolute;
+
+    }
+
     &-ext {
 
         @include flex(wrap, center, center, null);

@@ -36,7 +36,14 @@
 
             &-map {
 
+                @include flex(wrap, center, center, null);
                 border-radius: 4rem;
+
+                &-int {
+
+                    border-radius: 4rem;
+
+                }
 
             }
 

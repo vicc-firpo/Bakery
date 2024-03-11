@@ -59,7 +59,7 @@
                 font-family: $tipografia_principal;
                 font-size: map-get($map: $font_sizes, $key: s);
                 @include sizes(49.6rem, 44.6rem);
-                color: black;
+                color: $color5;
                 background-color: $color4;
                 border-radius: 4rem;
                 text-align:center;

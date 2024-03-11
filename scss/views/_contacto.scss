@@ -40,7 +40,7 @@
 
                 &-form {
 
-                    @include flex(wrap, center, null, column);
+                    @include flex(wrap, center, center, column);
                     font-size: map-get($map: $font_sizes, $key: s);
                     font-family: $tipografia_principal;
                     @include sizes(50rem, 30rem);
@@ -84,7 +84,6 @@
 
                 @include flex(wrap, center, center, row);
                 @include sizes(95rem, 35rem);
-                column-gap: 2rem;
 
                 &-form {
 
@@ -108,6 +107,7 @@
                         border: none;
                         background: $color3;
                         color: $color1;
+                        padding: 0 1rem;
     
                         &:hover {
     
