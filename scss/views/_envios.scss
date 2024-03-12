@@ -8,7 +8,7 @@
 
         @include flex(wrap, center, center, null);
         font-family: $tipografia_principal;
-        font-size: map-get($map: $font_sizes, $key: m);
+        font-size: map-get($map: $font_sizes, $key: s);
         padding: 3rem 0;
         @include sizes(100rem, null);
         font-weight: $principal_weight_font;
